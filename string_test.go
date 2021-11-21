@@ -3,7 +3,7 @@ package gostring_test
 import (
 	"testing"
 
-	gostring "github.com/randy-ang/go-string/cmd/go-string"
+	gostring "github.com/randy-ang/go-string"
 )
 
 func TestFormat(t *testing.T) {
@@ -17,6 +17,17 @@ func TestFormat(t *testing.T) {
 		args args
 		want string
 	}{
+		{
+			name: "test using args multiple times",
+			args: args{
+				mapArgs: map[string]interface{}{
+					"testInt":   123,
+					"testFloat": 1.2,
+				},
+				format: "1.{testFloat}\n2.{testFloat}",
+			},
+			want: "1.1.2\n2.1.2",
+		},
 		{
 			name: "test map equivalent map argument",
 			args: args{
