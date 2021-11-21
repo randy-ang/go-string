@@ -1,18 +1,18 @@
-#### go-string
+# go-string
 
 some library for simple string utility functions
 
-### Installing
+## Installing
 
 ```
 go get github.com/randy-ang/go-string
 ```
 
 
-### Format
+## Format
 formatted print, using values of map to replace the named arguments in curly brackets
 
-## Example
+### Example
 
 ```
 import gostring "github.com/randy-ang/go-string"
